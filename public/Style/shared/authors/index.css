@@ -1,0 +1,16 @@
+.all-authors {
+  display: flex;
+  align-items: center;
+  border-bottom: #0000003a 1.5px solid;
+  padding: 1.5rem 0;
+}
+.author-name {
+  flex: 1;
+  font-size: 1.5rem;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}

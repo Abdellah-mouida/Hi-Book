@@ -1,0 +1,10 @@
+<div class="container new-book">
+  <h2>New Book</h2>
+  <form action="/books/<%=book.id%>?_method=PUT" method="post">
+    <%- include("./_form_input.ejs") %>
+    <div class="cc-wrapper">
+      <button type="submit">Create</button>
+      <a href="/authors"><button class="cancel">Cancel</button></a>
+    </div>
+  </form>
+</div>

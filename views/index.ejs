@@ -1,0 +1,16 @@
+<div class="show">
+  <h2 style="padding: 1rem">Reacently Added</h2>
+
+  <div class="book-container">
+    <% books.forEach(book=> { %>
+    <div class="book simple">
+      <a href="/books/<%= book.id  %>"
+        ><img src="<%= book.coverImagePath %>"
+      /></a>
+      <div class="book-info">
+        <p class="pd-3"><%= book.title %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

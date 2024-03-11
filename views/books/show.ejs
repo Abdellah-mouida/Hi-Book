@@ -1,0 +1,23 @@
+<div class="show">
+  <h2>Book's Show Page</h2>
+  <div class="show-book-container">
+    <div class="book-img">
+      <a href="/books/<%= book.id  %>"
+        ><img src="<%= book.coverImagePath %>" width="200px"
+      /></a>
+    </div>
+    <div class="show-book-info">
+      <p><b>Title : </b><%= book.title %></p>
+      <p><b>Author : </b> <%= book.author.name %></p>
+      <p><b>Page Count :</b> <%= book.pageCount %></p>
+      <p><b>Publish Date :</b> <%= book.publishDate.toDateString() %></p>
+      <div class="cc-wrapper">
+        <a href="/books/<%= book.id  %>/edit"><button>Edit</button></a>
+        <br />
+        <%- include("../partials/delete.ejs",{url:`/books/${book.id}`}) %>
+        <br />
+      </div>
+    </div>
+    <pre class="desc"><%= book.description %></pre>
+  </div>
+</div>

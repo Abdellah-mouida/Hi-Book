@@ -1,0 +1,60 @@
+<div class="form-create-book">
+  <div class="d-flex">
+    <div class="form-controle">
+      <label for="name">Title</label>
+      <input
+        type="text"
+        placeholder="Book's name ..."
+        name="title"
+        value="<%= book.title %>"
+      />
+    </div>
+    <div class="form-controle">
+      <label for="">Page Count</label>
+      <input
+        type="number"
+        name="pageCount"
+        value="<%= book.pageCount %>"
+        placeholder="How much page in this Book ?"
+        min="1"
+      />
+    </div>
+
+    <div class="form-controle">
+      <label for="name">Author</label>
+      <select name="author">
+        <% authors.forEach(auth=>{ %> <% if(auth.id===book.author){ %>
+        <option
+          selected
+          value="<%= auth.id %>"
+          label="<%= auth.name %>"
+        ></option>
+        <% }else{ %>
+        <option value="<%= auth.id %>" label="<%= auth.name %>"></option>
+        <% } %> <% }) %>
+      </select>
+    </div>
+    <div class="form-controle">
+      <label for="">Publised Date</label>
+      <input type="date" name="publishDate" value="<%=
+      book.publishDate===null?"":book.publishDate?.toISOString().split("T")[0]
+      %>" />
+    </div>
+
+    <div class="form-controle">
+      <label for="">Cover</label>
+      <input
+        type="file"
+        accept=".jpeg, .png, .gif"
+        name="cover"
+        class="filepond cover"
+      />
+    </div>
+    <div class="form-controle">
+      <label for="">Description</label>
+      <textarea placeholder="Description ..." name="description">
+  <%= book.description %></textarea
+      >
+    </div>
+  </div>
+</div>

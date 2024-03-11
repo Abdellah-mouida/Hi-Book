@@ -1,0 +1,22 @@
+<div class="show">
+  <h2>Author Show Page</h2>
+  <h3><%= author.name %></h3>
+  <div class="cc-wrapper">
+    <a href="/authors/<%= author.id  %>/edit"> <button>Edit</button> </a>
+    <%- include("../partials/delete.ejs", {url: `/authors/${ author.id }`} ) %>
+  </div>
+  <hr />
+  <% if (books && books?.length>0) { %>
+
+  <p class="his">His Books</p>
+  <% books.forEach(book=> { %>
+  <div>
+    <a href="/books/<%= book.id  %>"
+      ><img src="<%= book.coverImagePath %>" width="200px"
+    /></a>
+    <br />
+    <h3><%= book.title %></h3>
+    <p><%= book.description %></p>
+  </div>
+  <% }) %> <% } %>
+</div>

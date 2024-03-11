@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Style/style.css" />
+    <link rel="stylesheet" href="/Style/filepond.css" />
+    <link rel="stylesheet" href="/Style/filepond-plugin-image-preview.css" />
+
+    <script defer src="/JavaScript/filepond.js"></script>
+    <script defer src="/JavaScript/filepond-plugin-file-encode.js"></script>
+    <script defer src="/JavaScript/filepond-plugin-image-preview.js"></script>
+    <script defer src="/JavaScript/filepond-plugin-image-resize.js"></script>
+
+    <script defer type="module" src="/JavaScript/FileUpload.js"></script>
+
+    <title>Hi-Book</title>
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %> <%-
+    include("../partials/errMessage.ejs") %><%- body %>
+  </body>
+</html>

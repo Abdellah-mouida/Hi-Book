@@ -1,0 +1,78 @@
+@import url("./shared/authors.css");
+@import url("./shared/header.css");
+@import url("./shared/authors/new.css");
+@import url("./shared/authors/show.css");
+@import url("./shared/authors/index.css");
+@import url("./shared/books/books.css");
+:root {
+  --Prcl: #0073ff;
+  --bg: #eee;
+  --font: #111;
+}
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  padding: 80px 0;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+h2 {
+  font-size: 2.5rem;
+  color: var(--font);
+  text-align: center;
+}
+button {
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  background-color: var(--Prcl);
+  color: var(--bg);
+  transition: 0.5s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.7;
+}
+.cancel {
+  background-color: #c9c9c9;
+  color: var(--font);
+}
+.delete {
+  background-color: #ff2121;
+  color: var(--bg);
+}
+select {
+  border: none;
+  border-bottom: var(--Prcl) 2px solid;
+  padding: 10px 15px;
+  color: var(--font);
+  font-size: 1.1rem;
+  outline: none;
+}
+textarea {
+  border: none;
+  border: var(--Prcl) 2px solid;
+  padding: 12px;
+  color: var(--font);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  width: 100%;
+  resize: none;
+}
+label {
+  font-size: 1.1rem;
+}
+img {
+  object-fit: cover;
+}

@@ -1,0 +1,52 @@
+<div class="show">
+  <h2 class="pd">Search Books</h2>
+  <form action="/books" method="get">
+    <div class="d-flex">
+      <div class="form-controle">
+        <label for="">Title</label>
+        <input
+          type="text"
+          placeholder="The Title of the Book Your looking for ..."
+          name="title"
+          value="<%= searchOption.title %>"
+        />
+      </div>
+      <div class="form-controle">
+        <label for="">Publised After</label>
+        <input
+          type="date"
+          name="publisedAfter"
+          value="<%= searchOption.publisedAfter %>"
+        />
+      </div>
+      <div class="form-controle">
+        <label for="">Publised Before</label>
+        <input
+          type="date"
+          name="publisedBefore"
+          value="<%= searchOption.publisedBefore %>"
+        />
+      </div>
+    </div>
+    <div class="cc-wrapper"><button type="submit">Search</button></div>
+  </form>
+
+  <div class="book-container">
+    <% books.forEach(book=> { %>
+    <div class="book simple">
+      <a href="/books/<%= book.id  %>"
+        ><img src="<%= book.coverImagePath %>"
+      /></a>
+      <div class="book-info">
+        <p class=""><%= book.title %></p>
+        <div class="cc-wrapper">
+          <a href="/books/<%= book.id  %>/edit"><button>Edit</button></a>
+          <br />
+          <%- include("../partials/delete.ejs",{url:`/books/${book.id}`}) %>
+          <br />
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

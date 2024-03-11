@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Edit Author</h2>
+  <form action="/authors/<%= author.id  %>?_method=PUT" method="post">
+    <%- include("./_form_input.ejs") %>
+    <div class="cc-wrapper">
+      <button type="submit">Edit</button>
+      <a href="/authors/<% author.id %>"
+        ><button class="cancel">Cancel</button></a
+      >
+    </div>
+  </form>
+</div>
